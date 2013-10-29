@@ -10,6 +10,11 @@ tracking the group leader.
 
 sleep 0.1;
 
+private ["_sectionLeader"];
+
+_sectionLeader= "";
+
+// Start of our main loop
 while {true} do
 {
 
@@ -30,9 +35,23 @@ while {true} do
   
   // Ensure that all world units are tracked for hits/killed.
   [] call axy_fnc_aarUpdateAllUnits;
+
+  // Has there been a change in leadership?
+  if !(_sectionLeader== name (leader player)) then
+  {
+	_sectionLeader= name leader player;
+	// Want the name quoted for import back into A3.
+	"AXY_AAR_Extension" callExtension format ["save:[%1,'SectionLeader','%2']", time, _sectionLeader];
+  };
   
-  // Storing the leader position.
-  "AXY_AAR_Extension" callExtension format ["save:[%1,'SectionLocation',%2]", time, position leader player];
+  // Storing the leader position - can be changed in the axy_aar_config.hpp
+  if (axyaar_trackLeader) then
+  {
+	"AXY_AAR_Extension" callExtension format ["save:[%1,'SectionLocation',%2]", time, position leader player];
+  } else 
+  {
+    "AXY_AAR_Extension" callExtension format ["save:[%1,'SectionLocation',%2]", time, position player];
+  };
 
   // are we still in contact?
   if (axyaar_sectionInContact select 0) then
@@ -62,6 +81,7 @@ while {true} do
 	  axyaar_sectionInContact set [2, -0];
     };
   };
-  sleep 30;
+  // Now let's just wait...
+  sleep axyaar_mainLoopSleep;			
 };
 

@@ -9,10 +9,9 @@ uses
 {$R *.res}
 
 const
-  C_ConfigFolder= '\Arma 3\@AXY_AAR';
-  C_ConfigFilename= '\AXY_AAR_Extension.config';
+  C_ConfigFilename= 'userconfig\axy_aar\axy_aar_config.hpp';
 
-  C_Config_AARDir= 'AARDirectory';
+  C_Config_AARDir= 'AXY_AAR_Extension_AAR_Folder';
   C_Config_CommentChar= '#';
 
   C_LogFilename= 'AXY_AAR_Extension.log';
@@ -48,15 +47,13 @@ function logMessage(logMessage: String): Boolean;
 var
   logFile: TextFile;
 begin
-  { no logging at the moment .}
+
 //  result:= True;
 //  exit;
 
   
-  AssignFile(logFile, G_AARDirectory+ '\'+ C_LogFilename);
-  if FileExists(G_AARDirectory+ '\'+ C_LogFilename) then
-//  AssignFile(logFile, 'E:\Temp\aar.log');
-//  if FileExists('E:\Temp\aar.log') then
+  AssignFile(logFile, G_AARDirectory+ C_LogFilename);
+  if FileExists(G_AARDirectory+ C_LogFilename) then
     Append(logFile)
   else
     ReWrite(logFile);
@@ -78,11 +75,11 @@ function handleClear(toArmA: PAnsiChar; outputSize: Integer; fromArmA: string): 
 begin
   Result:= False;
   logMessage('Clearing existing Mission.');
-  if FileExists(G_AARDirectory+ '\'+ G_CurrentMission+ C_MissionExt) then
+  if FileExists(G_AARDirectory+ G_CurrentMission+ C_MissionExt) then
   begin
     // Rename it?
-    CopyFile(PChar(G_AARDirectory+ '\'+ G_CurrentMission+ C_MissionExt), PChar(G_AARDirectory+ '\'+ G_CurrentMission+ C_MissionExt+ '.old'), False);
-    SysUtils.DeleteFile(G_AARDirectory+ '\'+ G_CurrentMission+ C_MissionExt);
+    CopyFile(PChar(G_AARDirectory+ G_CurrentMission+ C_MissionExt), PChar(G_AARDirectory+ G_CurrentMission+ C_MissionExt+ '.old'), False);
+    SysUtils.DeleteFile(G_AARDirectory+ G_CurrentMission+ C_MissionExt);
     G_LastLoadLine:= 0;
     strcopy(toArmA, 'ok');
     Result:= true;
@@ -108,8 +105,8 @@ begin
     exit;
   end;
 
-  assignFile(missionFile, G_AARDirectory+ '\'+ G_CurrentMission+ C_MissionExt);
-  if FileExists(G_AARDirectory+ '\'+ G_CurrentMission+ C_MissionExt) then
+  assignFile(missionFile, G_AARDirectory+ G_CurrentMission+ C_MissionExt);
+  if FileExists(G_AARDirectory+ G_CurrentMission+ C_MissionExt) then
     Append(missionFile)
   else
     Rewrite(missionFile);
@@ -136,9 +133,9 @@ begin
   Result:= False;
   G_PerformSaves:= False;
   logMessage('Loading next mission file line.');
-  if FileExists(G_AARDirectory+ '\'+ G_CurrentMission+ C_MissionExt) then
+  if FileExists(G_AARDirectory+ G_CurrentMission+ C_MissionExt) then
   begin
-    assignFile(missionFile, G_AARDirectory+ '\'+ G_CurrentMission+ C_MissionExt);
+    assignFile(missionFile, G_AARDirectory+ G_CurrentMission+ C_MissionExt);
     reset(missionFile);
     try
       // Ignore any line that starts with a # - it's a comment
@@ -211,11 +208,12 @@ begin
   if DirectoryExists(G_AARDirectory) then
   begin
     missionList:= '';
-    if FindFirst(G_AARDirectory+ '\*'+ C_MissionExt, faAnyFile, srFiles)= 0 then
+    if FindFirst(G_AARDirectory+ '*'+ C_MissionExt, faAnyFile, srFiles)= 0 then
     begin
       repeat
         logMessage('Found filename: '+ srFiles.Name);
-        fileName:= Copy(srFiles.Name, 1, pos('.', srFiles.Name)- 1);
+        // Cut the extension off it.
+        fileName:= ChangeFileExt(srFiles.Name, '');
         if length(missionList)= 0 then
           missionList:= '["'+ filename+ '"'
         else
@@ -296,7 +294,7 @@ function getConfigFileName: string;
 var
   myDocs: array[0..Max_Path] of Char;
 begin
-  // try a few different places for the config file...base A3 folder and my documents
+(*  // try a few different places for the config file...base A3 folder and my documents
   Result:= '';
   if fileExists(GetCurrentDir+ C_ConfigFilename) then
     Result:= GetCurrentDir+ C_ConfigFilename
@@ -305,8 +303,9 @@ begin
     if not shGetSpecialFolderPath(0, myDocs, CSIDL_personal, False) then exit;
     if fileExists(string(myDocs)+ C_ConfigFolder+ C_ConfigFilename) then
       Result:= string(myDocs)+ C_ConfigFolder+ C_ConfigFilename;
-  end;
-  logMessage('config used is '+ result);
+  end;  *)
+  // Now using the axy_aar_config.hpp file...
+  Result:= IncludeTrailingPathDelimiter(getCurrentDir)+ C_ConfigFilename;
 end;
 
 { Loads up the config parameters. }
@@ -315,8 +314,6 @@ var
   configFile: TextFile;
   missionsDirectory, fileLine: String;
 begin
-  // Only one config parameter at the moment, location of the mission files...so I can be lazy.
-//  logMessage('reading config, looking for '+ getCurrentDir+ '\'+ C_ConfigFilename);
   if getConfigFileName<> '' then
   begin
     AssignFile(configFile, getConfigFileName);
@@ -325,22 +322,15 @@ begin
       while not Eof(configFile) do
       begin
         readln(configFile, fileLine);
-        //logmessage('read config line of '+ fileLine);
-        // Allowing comment lines to start with #...so skip those.
-        if copy(fileLine, 1, 1)= C_Config_CommentChar then
+        if pos(C_Config_AARDir, fileLine)> 0 then
         begin
-          {Nothing to do - ignore.}
-        end
-        else if pos(C_Config_AARDir, fileLine)> 0 then
-        begin
-          //logMessage('found missions definition.');
-          missionsDirectory:= trimLeft(copy(fileLine, pos('=', fileLine)+ 1, length(fileLine)));
-          //logMessage('missions directory is '+ missionsDirectory);
+          //Just grab the text between the double quotes...
+          missionsDirectory:= copy(fileLine, pos('"', fileLine)+ 1, length(fileLine)- pos('"', fileLine)- 1);
           if DirectoryExists(missionsDirectory) then
           begin
-            G_AARDirectory:= missionsDirectory;
+            G_AARDirectory:= IncludeTrailingPathDelimiter(missionsDirectory);
             // Logging here because that's where G_MissionsDIrectory is set.
-            logMessage('Config Missions Directory set to: '+ missionsDirectory);
+            logMessage('Config Missions Directory set to: '+ G_AARDirectory);
           end;
         end;
       end;
@@ -355,7 +345,7 @@ exports
 
 begin
   { Run when the dll is loaded .}
-  G_AARDirectory:= '';   // Start with the ArmA folder.
+  G_AARDirectory:= IncludeTrailingPathDelimiter(GetCurrentDir);   // Start with the ArmA folder.
   G_CurrentMission:= '';
   G_LastLoadLine:= 0;
   G_PerformSaves:= False;  // Don't start out by saving anything.
