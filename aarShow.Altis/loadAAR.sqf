@@ -1,3 +1,5 @@
+#include "\userconfig\axy_aar\axy_aar_config.hpp"
+
 // Loads up the aar data...
 
 private ["_aarMission", "_aarLine", "_keepLoading"];
@@ -34,14 +36,14 @@ while {(_keepLoading)} do
 			if !(_firstPos) then
 			{
 				// are we too far away from the prior position update?
-				if (_lastPos distance (_aarLine select 2)< 800) then
+				if (_lastPos distance (_aarLine select 2)< AXY_AAR_aarShow_DISTANCE_IGNORE) then
 				{
 					if (_inContact) then
 					{
-						nul=[_lastPos, (_aarLine select 2), "colorRED", 6, 1] call fn_drawLine;
+						nul=[_lastPos, (_aarLine select 2), "colorRED", AXY_AAR_aarShow_LINE_THICKNESS, 1] call fn_drawLine;
 						// Draw a marker here too?
 					} else {
-						nul=[_lastPos, (_aarLine select 2), "colorGREEN", 6, 1] call fn_drawLine;
+						nul=[_lastPos, (_aarLine select 2), "colorGREEN", AXY_AAR_aarShow_LINE_THICKNESS, 1] call fn_drawLine;
 					};
 				};
 				sleep 0.01;
@@ -56,6 +58,11 @@ while {(_keepLoading)} do
 		case "InContact":
 		{
 			_inContact= true;
+		};
+		case "SectionLeader":
+		{
+			player createDiaryRecord["AARContacts", [format["+%1 New Section Leader", (_aarLine select 0)],format["Section Leader now %1.", (_aarLine select 2)]]];
+		
 		};
 		case "ContactReport":
 		{
