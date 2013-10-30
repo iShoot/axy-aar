@@ -48,8 +48,9 @@ var
   logFile: TextFile;
 begin
 
-//  result:= True;
-//  exit;
+  // No logging at the moment.
+  result:= True;
+  exit;
 
   
   AssignFile(logFile, G_AARDirectory+ C_LogFilename);

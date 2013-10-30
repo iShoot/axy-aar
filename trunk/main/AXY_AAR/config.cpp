@@ -6,11 +6,11 @@ class CfgPatches
 			units[] = { };
 			weapons[] = { };
 			requiredAddons[] = {"CBA_Extended_EventHandlers"};
-			version = "0.3";
-			versionStr = "0.3";
-			versionDesc="Axyl's AAR System - www.combatteambravo.com";
-			versionAr[] = {0,3,0};
-			author[] = {"Axyl"};
+			version = "0.4";
+			versionStr = "0.4";
+			versionDesc="Automated AAR Generator";
+			versionAr[] = {0,4,0};
+			author[] = {"axyl - craig.foley@gmail.com"};
 		};
 };
 

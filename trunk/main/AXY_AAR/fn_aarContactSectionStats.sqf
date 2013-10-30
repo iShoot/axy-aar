@@ -7,10 +7,11 @@ Returns stats for the Contact Report on the section.
 
 // Are we actually in contact?  TODO
 
-private ["_stats"];
+private ["_stats", "_members"];
 
-// Shots fired, WIA, KIA
-_stats= [0,0,0];
+// Shots fired, WIA, KIA, Array of Members
+_stats= [0,0,0,[]];
+_members= [];
 
 // Array Item structure is  name, Identity, Position, shots, hit, killed
 {
@@ -23,7 +24,12 @@ _stats= [0,0,0];
 			_stats set [1, (_stats select 1)+ 1];
 		};
 	};
+	// Grab the section member.
+	_members set [count _members, _x select 1];
 } forEach axyaar_section;
+
+// Add the members as the 4th array element.
+_stats set [3, _members];
 
 // Now return the details.
 _stats

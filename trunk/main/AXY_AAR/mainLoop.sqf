@@ -62,7 +62,7 @@ while {true} do
 	  private ["_sectionStats", "_enemyStats"];
 	  _sectionStats= [] call axy_fnc_aarContactSectionStats;
 	  _enemyStats= [] call axy_fnc_aarContactEnemyStats;
-	  "AXY_AAR_Extension" callExtension "save:# Format of Contact Report is Current Time, Contact Start Time, Contact Duration, SectionShotsFired, SectionWIA, SectionKIA, EnemyWIA, EnemyKIA";
+	  //  Format of Contact Report is Current Time, Contact Start Time, Contact Duration, [SectionShotsFired, SectionWIA, SectionKIA, [squadmembers]], [EnemyWIA, EnemyKIA]";
       "AXY_AAR_Extension" callExtension format ["save:[%1,'ContactReport',%2,%3,%4,%5]", time, (axyaar_sectionInContact select 1), (axyaar_sectionInContact select 2)- (axyaar_sectionInContact select 1), _sectionStats, _enemyStats];
 	  
 	  // Reset Section stats.  Array Item structure is  name, Identity, Position, shots, hit, killed
