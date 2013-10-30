@@ -5,6 +5,14 @@ waituntil {alive player};
 "AXY_AAR_Extension" callExtension format ["mission:%1.%2", missionName, worldName];
 "AXY_AAR_Extension" callExtension "clear:all";
 
+// Write out the addon version to the file.
+if (isClass(configfile >> "cfgPatches" >> "AXY_AAR")) then
+{
+	"AXY_AAR_Extension" callExtension format["save:[0,'version',%1]", getArray(configfile >> "cfgPatches" >> "AXY_AAR" >> "versionar")];
+} else {
+	"AXY_AAR_Extension" callExtension "save:[0,'version',[0,0,0]]";  // Just text...
+};
+
 // Contains the list of members in our group/section.
 axyaar_section= [];
 
@@ -25,11 +33,15 @@ axyaar_mainLoopSleep= AXY_AAR_PAUSE_LOOP;
 // Should we be tracking the player's position, or the group leaders position?
 axyaar_trackLeader= AXY_AAR_TRACK_LEADER;
 
-diag_log format["Contact Ends in: %1", axyaar_contactEnds];
-diag_log format["Will be pausing for: %1", axyaar_mainLoopSleep];
-
 // call main program loop.
 private ["_mainLoop"];
-// *****
-_mainLoop= compile preprocessFileLineNumbers "\axy_AAR\mainLoop.sqf";
+
+// Can run this in my mission or as addon...
+if isClass(configfile >> "cfgPatches" >> "AXY_AAR") then
+{
+	_mainLoop= compile preprocessFileLineNumbers "\axy_AAR\mainLoop.sqf";
+} else {
+	// Otherwise, running in mission code.
+	_mainLoop= compile preprocessFileLineNumbers "axy_AAR\mainLoop.sqf";
+};
 [] spawn _mainLoop;
