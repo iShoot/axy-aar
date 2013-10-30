@@ -26,6 +26,7 @@ private ["_lastPos", "_firstPos", "_inContact"];
 _lastPos= [0,0,0];
 _firstPos= true;
 _inContact= False;
+_inContactStartPos= [0,0,0];
 
 while {(_keepLoading)} do
 {
@@ -58,6 +59,8 @@ while {(_keepLoading)} do
 		case "InContact":
 		{
 			_inContact= true;
+			// note the last position - so we can show start of contact.
+			_inContactStartPos= _lastPos;
 		};
 		case "SectionLeader":
 		{
@@ -66,19 +69,27 @@ while {(_keepLoading)} do
 		};
 		case "ContactReport":
 		{
-			private ["_enemyBit", "_sectionBit", "_contactMarker", "_markerLink"];
+			private ["_enemyBit", "_sectionBit", "_contactMarker", "_markerLink", "_sectionMembers"];
 			_enemyBit= format["<font size=20>Enemy Stats</font><br />Enemy KIA: %1<br/>Enemy WIA: %2<br/>", ((_aarLine select 5) select 1), ((_aarLine select 5) select 0)];
 			_sectionBit= format["<font size=20>Section Stats</font><br />Section Shots Fired: %1<br />KIA: %2<br />WIA: %3<br />", ((_aarLine select 4) select 0), ((_aarLine select 4) select 2), ((_aarLine select 4) select 1)];
 			
 			// Create the marker for the location
-			_contactMarker= createMarker[format["m%1", (_aarLine select 2)], _lastPos];
+			_contactMarker= createMarker[format["m%1", (_aarLine select 2)], _inContactStartPos];
 			_contactMarker setMarkerShape "ICON";
 			_contactMarker setMarkerType "Empty";
 			_contactMarker setMarkerColor "ColorRed";
 			
-			_markerLink= format["Contact Location: %1<br /><marker name=""%2"">Clickable Link</marker>", _lastPos, format["m%1", (_aarLine select 2)]];
+			// diag_log ((_aarLine select 4) select 3);
+			_sectionMembers= "<font size=20>Section Members</font><br />";
+			{
+					diag_log _x;
+					_sectionMembers= _sectionMembers+ _x+ "<br />";
+			} forEach ((_aarLine select 4) select 3);
+			diag_log _sectionMembers;
 			
-			player createDiaryRecord["AARContacts", [format["+%1", (_aarLine select 2)], format["Contact Duration: %1<br/><br/>%2<br />%3<br />%4", (_aarLine select 3), _enemyBit, _sectionBit, _markerLink]]];
+			_markerLink= format["Contact Location: %1<br /><marker name=""%2"">Clickable Link</marker>", _inContactStartPos, format["m%1", (_aarLine select 2)]];
+			
+			player createDiaryRecord["AARContacts", [format["+%1", (_aarLine select 2)], format["Contact Duration: %1<br/><br/>%2<br />%3<br />%4<br />%5", (_aarLine select 3), _enemyBit, _sectionBit, _sectionMembers, _markerLink]]];
 			_inContact= False;
 		
 		};
