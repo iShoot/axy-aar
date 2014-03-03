@@ -25,12 +25,11 @@ Once you've generated a set of files (by default, these are written out to your 
 
 === Web Site ===
 
-The WebView*.zip file contains the basic structure of the web directories required.  There's no server side code (i.e. no PHP or .net) but you do need to run these files via a web server.  Just opening them in a browser direct from your computer *will not work*.
+The WebView**.zip file contains the basic structure of the web directories required.  There's no server side code (i.e. no PHP or .net) but you do need to run these files via a web server.  Just opening them in a browser direct from your computer *will not work*.
 
-For example:
+To get setup (and for your first report):
   # Extract the zip to a subdirectory of your website called aar. 
   # Extract the AltisTiles archive to the ./maps/altis/tiles directory on the website.
   # Create a new directory under the ./missions folder with the unique name of your mission.  For example _squadNight20140302_ .
   # Copy all of the json files created by the Report Generator to that mission folder.
   # The URL to view the mission needs to include the mission name, with the _mission_ parameter.  For example _http://www.mycoolwebsite/aar/index.html?mission=squadNight20140302_
-
