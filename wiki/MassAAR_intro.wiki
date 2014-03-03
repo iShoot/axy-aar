@@ -16,6 +16,8 @@ Couple of Notes:
 
 Latest files are available [https://drive.google.com/folderview?id=0B3w2Hwg2Q0mXSW91cFMzdk5XOVk&usp=sharing here].
 
+The Map Tiles is a separate download, as they will likely be updated at separate times to everything else.  Thanks to Marty and Sly for doing the tiling and location work.
+
 == Instructions ==
 
 === Addon ===
