@@ -4,6 +4,12 @@
 
 Based on the early AAR work I was doing, I started playing with a system that could record and play back all activity during a mission.  This is the current prototype of that work.
 
+Couple of Notes:
+  * Only one player (or HC or server) needs to run this.
+  * It's currently favoured towards West.
+  * Only supports Altis out of the box, but you can probably see how to add in other maps, once you look at the code.
+  * I wrote this as a prototype idea...
+
 = Details =
 
 *Current Downloads*
