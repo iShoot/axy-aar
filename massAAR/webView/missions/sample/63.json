@@ -1,0 +1,161 @@
+{"positions":[
+{"name":"Mufid Sabet","id":"","x":10959,"y":11236,"grp":"Alpha 1-1","inveh":false,"dam":0,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Amir Khara","id":"","x":10964,"y":11237,"grp":"Alpha 1-1","inveh":false,"dam":0,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Qadeer Zahor","id":"","x":10953,"y":11241,"grp":"Alpha 1-1","inveh":false,"dam":0.0718762,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Rahim Habibi","id":"","x":10969,"y":11242,"grp":"Alpha 1-1","inveh":false,"dam":0.713463,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Khalil Siddiqi","id":"","x":10948,"y":11245,"grp":"Alpha 1-1","inveh":false,"dam":0,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Abbas Ratebzad","id":"","x":10974,"y":11247,"grp":"Alpha 1-1","inveh":false,"dam":0.354678,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Mahmood Ahmed-Khan","id":"","x":10943,"y":11249,"grp":"Alpha 1-1","inveh":false,"dam":0,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Aslan Kakar","id":"","x":10962,"y":11286,"grp":"Alpha 1-2","inveh":false,"dam":0.0887832,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Mahmood Bahadur","id":"","x":10958,"y":11298,"grp":"Alpha 1-2","inveh":false,"dam":0.530982,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Akbar Mohammadi","id":"","x":10981,"y":11299,"grp":"Alpha 1-2","inveh":false,"dam":0,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Aslan Zamani","id":"","x":10953,"y":11304,"grp":"Alpha 1-2","inveh":false,"dam":0,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Hussein Sangeen","id":"","x":10988,"y":11246,"grp":"Alpha 1-3","inveh":false,"dam":0,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Azim Zakhilwal","id":"","x":10986,"y":11254,"grp":"Alpha 1-3","inveh":false,"dam":0.165833,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Arif Noori","id":"","x":10982,"y":11266,"grp":"Alpha 1-3","inveh":false,"dam":0.00117746,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Jafar Muhtaram","id":"","x":10971,"y":11252,"grp":"Alpha 1-3","inveh":false,"dam":0.455061,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Bashir Jalali","id":"","x":10986,"y":11271,"grp":"Alpha 1-3","inveh":false,"dam":0,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Hasan Zahor","id":"","x":10962,"y":11261,"grp":"Alpha 1-3","inveh":false,"dam":0.399,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Sibhatullah Ahmed-Jan","id":"","x":11026,"y":11473,"grp":"Alpha 2-1","inveh":false,"dam":0,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Basharat Kakar","id":"","x":11018,"y":11466,"grp":"Alpha 2-1","inveh":false,"dam":0,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Qadeer Gailani","id":"","x":11045,"y":11454,"grp":"Alpha 2-1","inveh":false,"dam":0.0601661,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Azim Haidari","id":"","x":10781,"y":11619,"grp":"Alpha 2-2","inveh":false,"dam":0,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Abdul-Mussawir Ratebzad","id":"","x":10759,"y":11388,"grp":"Alpha 2-2","inveh":false,"dam":0,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Mahmood Siddiqi","id":"","x":10769,"y":11397,"grp":"Alpha 2-2","inveh":false,"dam":0,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Sami Ratebzad","id":"","x":11006,"y":11207,"grp":"Alpha 2-3","inveh":false,"dam":0.67324,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Jabr Zakhilwal","id":"","x":11014,"y":11210,"grp":"Alpha 2-3","inveh":false,"dam":0,"side":"EAST","shots":0,"hits":0,"fdir":0}
+,{"name":"Sean Walker","id":"","x":10789,"y":11019,"grp":"Alpha 1-1","inveh":false,"dam":0,"side":"WEST","shots":0,"hits":0,"fdir":0}
+,{"name":"Tyler Jackson","id":"","x":10897,"y":10872,"grp":"Alpha 1-3","inveh":false,"dam":0,"side":"WEST","shots":0,"hits":0,"fdir":0}
+,{"name":"Keith Johnson","id":"","x":11128,"y":10948,"grp":"Alpha 1-3","inveh":false,"dam":0,"side":"WEST","shots":0,"hits":0,"fdir":0}
+,{"name":"Ethan Brown","id":"","x":10819,"y":10962,"grp":"Alpha 2-2","inveh":false,"dam":0.25,"side":"WEST","shots":0,"hits":0,"fdir":0}
+,{"name":"Benjamin Jackson","id":"","x":11200,"y":10962,"grp":"Alpha 2-2","inveh":false,"dam":0.412039,"side":"WEST","shots":0,"hits":0,"fdir":0}
+,{"name":"Axyl","id":"","x":10990,"y":11224,"grp":"Alpha 1-1","inveh":true,"dam":0,"side":"CIV","shots":0,"hits":0,"fdir":0}
+,{"name":"Error: No unit","id":"","x":11024,"y":11276,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11028,"y":11269,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11036,"y":11276,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11031,"y":11265,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10992,"y":11221,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10992,"y":11216,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11000,"y":11214,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11045,"y":11270,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10989,"y":11207,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10988,"y":11204,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10984,"y":11201,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11015,"y":11217,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10934,"y":11196,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10977,"y":11196,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10996,"y":11200,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10932,"y":11192,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10996,"y":11196,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10984,"y":11191,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10977,"y":11189,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10968,"y":11187,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10997,"y":11194,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10988,"y":11190,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10991,"y":11190,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10941,"y":11183,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10970,"y":11182,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10993,"y":11186,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10934,"y":11182,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11012,"y":11191,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10930,"y":11181,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10974,"y":11177,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10989,"y":11180,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11007,"y":11184,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10959,"y":11173,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10977,"y":11172,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11019,"y":11186,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11017,"y":11175,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11047,"y":11196,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11020,"y":11169,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11062,"y":11216,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11054,"y":11197,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11050,"y":11191,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11044,"y":11184,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11062,"y":11209,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11051,"y":11178,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11074,"y":11215,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11070,"y":11194,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11085,"y":11202,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":11045,"y":11389,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10921,"y":11153,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10958,"y":11395,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10951,"y":11393,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10974,"y":11390,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10970,"y":11391,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10959,"y":11388,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10960,"y":11388,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10936,"y":11382,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10943,"y":11380,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10961,"y":11380,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10941,"y":11370,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10910,"y":11355,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10904,"y":11350,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10955,"y":11366,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10909,"y":11349,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10967,"y":11364,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10911,"y":11312,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"name":"Error: No unit","id":"","x":10912,"y":11311,"grp":"","inveh":false,"dam":1,"side":"UNKNOWN","isDead":true}
+,{"vehicle":"unknown","x":10996,"y":11216,"side":"CIV"}
+,{"vehicle":"unknown","x":11023,"y":11276,"side":"CIV"}
+,{"vehicle":"unknown","x":11036,"y":11275,"side":"CIV"}
+,{"vehicle":"unknown","x":10993,"y":11222,"side":"CIV"}
+,{"vehicle":"unknown","x":10993,"y":11216,"side":"CIV"}
+,{"vehicle":"unknown","x":11000,"y":11215,"side":"CIV"}
+,{"vehicle":"unknown","x":10989,"y":11207,"side":"CIV"}
+,{"vehicle":"unknown","x":10988,"y":11205,"side":"CIV"}
+,{"vehicle":"unknown","x":10984,"y":11201,"side":"CIV"}
+,{"vehicle":"unknown","x":10934,"y":11196,"side":"CIV"}
+,{"vehicle":"unknown","x":10977,"y":11196,"side":"CIV"}
+,{"vehicle":"unknown","x":10996,"y":11201,"side":"CIV"}
+,{"vehicle":"unknown","x":10933,"y":11192,"side":"CIV"}
+,{"vehicle":"unknown","x":10995,"y":11196,"side":"CIV"}
+,{"vehicle":"unknown","x":10984,"y":11191,"side":"CIV"}
+,{"vehicle":"unknown","x":10977,"y":11189,"side":"CIV"}
+,{"vehicle":"unknown","x":10968,"y":11187,"side":"CIV"}
+,{"vehicle":"unknown","x":10997,"y":11195,"side":"CIV"}
+,{"vehicle":"unknown","x":10988,"y":11190,"side":"CIV"}
+,{"vehicle":"unknown","x":10991,"y":11191,"side":"CIV"}
+,{"vehicle":"unknown","x":10941,"y":11184,"side":"CIV"}
+,{"vehicle":"unknown","x":10992,"y":11186,"side":"CIV"}
+,{"vehicle":"unknown","x":10970,"y":11180,"side":"CIV"}
+,{"vehicle":"unknown","x":10934,"y":11182,"side":"CIV"}
+,{"vehicle":"unknown","x":10990,"y":11180,"side":"CIV"}
+,{"vehicle":"unknown","x":10975,"y":11176,"side":"CIV"}
+,{"vehicle":"unknown","x":10929,"y":11179,"side":"CIV"}
+,{"vehicle":"unknown","x":10976,"y":11173,"side":"CIV"}
+,{"vehicle":"unknown","x":11047,"y":11196,"side":"CIV"}
+,{"vehicle":"unknown","x":11061,"y":11217,"side":"CIV"}
+,{"vehicle":"unknown","x":11055,"y":11198,"side":"CIV"}
+,{"vehicle":"unknown","x":11050,"y":11192,"side":"CIV"}
+,{"vehicle":"unknown","x":11044,"y":11184,"side":"CIV"}
+,{"vehicle":"unknown","x":11062,"y":11208,"side":"CIV"}
+,{"vehicle":"unknown","x":11062,"y":11208,"side":"CIV"}
+,{"vehicle":"unknown","x":11052,"y":11179,"side":"CIV"}
+,{"vehicle":"unknown","x":11073,"y":11216,"side":"CIV"}
+,{"vehicle":"unknown","x":11069,"y":11194,"side":"CIV"}
+,{"vehicle":"unknown","x":11083,"y":11200,"side":"CIV"}
+,{"vehicle":"unknown","x":10921,"y":11153,"side":"CIV"}
+,{"vehicle":"unknown","x":11045,"y":11390,"side":"CIV"}
+,{"vehicle":"unknown","x":11046,"y":11389,"side":"CIV"}
+,{"vehicle":"unknown","x":10956,"y":11395,"side":"CIV"}
+,{"vehicle":"unknown","x":10956,"y":11394,"side":"CIV"}
+,{"vehicle":"unknown","x":10951,"y":11393,"side":"CIV"}
+,{"vehicle":"unknown","x":10951,"y":11392,"side":"CIV"}
+,{"vehicle":"unknown","x":10974,"y":11390,"side":"CIV"}
+,{"vehicle":"unknown","x":10971,"y":11390,"side":"CIV"}
+,{"vehicle":"unknown","x":10961,"y":11388,"side":"CIV"}
+,{"vehicle":"unknown","x":10958,"y":11388,"side":"CIV"}
+,{"vehicle":"unknown","x":10936,"y":11382,"side":"CIV"}
+,{"vehicle":"unknown","x":10942,"y":11381,"side":"CIV"}
+,{"vehicle":"unknown","x":10943,"y":11380,"side":"CIV"}
+,{"vehicle":"unknown","x":10960,"y":11379,"side":"CIV"}
+,{"vehicle":"unknown","x":10940,"y":11372,"side":"CIV"}
+,{"vehicle":"unknown","x":10911,"y":11356,"side":"CIV"}
+,{"vehicle":"unknown","x":10904,"y":11350,"side":"CIV"}
+,{"vehicle":"unknown","x":10955,"y":11366,"side":"CIV"}
+,{"vehicle":"unknown","x":10909,"y":11348,"side":"CIV"}
+,{"vehicle":"unknown","x":10967,"y":11364,"side":"CIV"}
+,{"vehicle":"unknown","x":10910,"y":11311,"side":"CIV"}
+,{"vehicle":"unknown","x":10911,"y":11311,"side":"CIV"}
+]}
