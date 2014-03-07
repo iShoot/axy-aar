@@ -587,22 +587,23 @@
 	      // Show the contact Reports.
 		  loadContactReports();
 		  
+		  		// Want to update our URL with coords/zoom as we move around.
+			map.on('zoomend', function(e) {
+				document.location.hash="zoom="+ map.getZoom()+ "&lat="+ map.getCenter().lat+ "&lng="+ map.getCenter().lng+ "&position="+ currentIndex;
+			});
+			map.on('moveend', function(e) {
+				document.location.hash="zoom="+ map.getZoom()+ "&lat="+ map.getCenter().lat+ "&lng="+ map.getCenter().lng+ "&position="+ currentIndex;
+			});
+			map.on('mousemove', function(e) {
+			  // Show map coordinates in status bar.
+			  var cursorPos= map.project(e.latlng, map.getMaxZoom());
+			  document.getElementById('coords').innerText= 'ArmA Coordinates: '+ cursorPos.x+ ', '+ (mapYMax- cursorPos.y);
+			
+			});
+
 		
 		});
 		
-		// Want to update our URL with coords/zoom as we move around.
-		map.on('zoomend', function(e) {
-			document.location.hash="zoom="+ map.getZoom()+ "&lat="+ map.getCenter().lat+ "&lng="+ map.getCenter().lng+ "&position="+ currentIndex;
-		});
-		map.on('moveend', function(e) {
-			document.location.hash="zoom="+ map.getZoom()+ "&lat="+ map.getCenter().lat+ "&lng="+ map.getCenter().lng+ "&position="+ currentIndex;
-		});
-		map.on('mousemove', function(e) {
-		  // Show map coordinates in status bar.
-		  var cursorPos= map.project(e.latlng, map.getMaxZoom());
-		  document.getElementById('coords').innerText= 'ArmA Coordinates: '+ cursorPos.x+ ', '+ (mapYMax- cursorPos.y);
-		
-		});
     </script>
 	
 	
