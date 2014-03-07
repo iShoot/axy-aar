@@ -2,6 +2,8 @@
 // Coordinates of the Map from 0,0 to....
 var mapYMax= 32769;
 var mapXMax= 30718;
+var mapMaxZoom= 7;		// maximum zoom for tiles.
+var mapName= "altis";
 
 // All of the Y Coordinates for these are wrong.  I think marty inverted them before setting them?
 
