@@ -72,11 +72,17 @@
 		//map.setMaxBounds(new L.LatLngBounds(southWest, northEast));
 	
         // **** needs to be dynamic.
-        L.tileLayer('maps/'+ mapName+ '/tiles/{z}/{x}/{y}.png', {
+        var tileLayers= L.tileLayer('maps/'+ mapName+ '/tiles/{z}/{x}/{y}.png', {
             attribution: 'Bohemia Interactive Studios, marty [CTB], Axyl [CTB], slydog [CTB]',
             tms: true,
 			noWrap: true
         }).addTo(map);
+		
+		// This gets called every time new tiles are loaded, but the first time
+		// We want all the tiles before we go and stick the AAR stuff on top.
+		tileLayers.on('load', function(e) {
+				$.holdReady( false );
+		});
 		
 		// sidebar.
 		var sidebar= L.control.sidebar('sidebar', {closeButton: true, position: 'left'});
@@ -597,8 +603,6 @@
 		  document.getElementById('coords').innerText= 'ArmA Coordinates: '+ cursorPos.x+ ', '+ (mapYMax- cursorPos.y);
 		
 		});
-		
-		$.holdReady( false  );
     </script>
 	
 	
